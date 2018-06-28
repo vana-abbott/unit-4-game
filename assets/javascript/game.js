@@ -1,4 +1,4 @@
-var random = Math.floor(Math.random()*102)+19;
+var random = Math.floor(Math.random() * 102) + 19;
 var userTotal = 0; 
 var wins = 0; 
 var losses = 0; 
@@ -11,20 +11,21 @@ var red= Math.floor(Math.random()*12+1)
 var green= Math.floor(Math.random()*12+1)
 var yellow= Math.floor(Math.random()*12+1)
 
+$("#randomNumber").text(random);
 
 $.map(gems, function(){
     gemValues.push(Math.floor(Math.random()*12)+1);
 });
-$("wins").html(wins); 
-$("losses").html(losses);
-// This will hold all of the user's score and total points. Now grab it in HTML with jQuery
+$("wins").text(wins); 
+$("losses").text(losses);
+// This will hold all of the user's score and total points. Now grab it in text with jQuery
 // Added the random number var so user can guess // 
 function reset(){
-    random = Math.floor(Math.random*102)+19
+    random = Math.floor(Math.random()*102)+19;
     userTotal = 0; 
     console.log(random);
-    $("#randomNumber").html(random);
-    $("#finalScore").html(userTotal);
+    $("#randomNumber").text(random);
+    $("#finalScore").text(userTotal);
     $.map(gems, function(){
         gemValues.push(Math.floor(Math.random()*12)+1);
     });
@@ -33,12 +34,12 @@ function reset(){
 // display random number and final score onto display 
 function winner(){
     wins++;
-    $("wins").html(wins); 
+    $("#wins").text(wins); 
     reset();
 }
-function losses() {
+function Loser() {
     losses++;
-    $("losses").html(losses);
+    $("#losses").text(losses);
     reset();
 }
 
@@ -48,14 +49,17 @@ function losses() {
 function calculateScore() {
     if (userTotal === random){
         winner();
+        $("#wins").text(wins);
+        console.log(wins);
     } 
     else if (userTotal > random){
         losses();
+        $('#losses').text(losses);
+		        console.log(losses)
     }
 
 
 }
-reset();
 // Below create win losses with if else to see if their score matches up or not with randomNumber// 
 $('#blue').on ('click', function(){
     userTotal = userTotal + blue;
@@ -65,8 +69,10 @@ $('#blue').on ('click', function(){
           winner();
         }
         else if ( userTotal > random){
-          losses();
+          Loser();
         }   
+
+        $("#randomNumber").text(random);
   });
 
   $("#green").on ('click', function(){
@@ -77,8 +83,10 @@ $('#blue').on ('click', function(){
           winner();
         }
         else if ( userTotal > random){
-          loser();
+            Loser();
         } 
+
+    $("#randomNumber").text(random);
   });
 
   $("#red").on ('click', function(){
@@ -89,19 +97,23 @@ $('#blue').on ('click', function(){
           winner();
         }
         else if ( userTotal > random){
-          losses();
+            Loser();
         } 
+
+    $("#randomNumber").text(random);
   });   
 
   $("#yellow").on ('click', function(){
     userTotal = userTotal + yellow;
     console.log("New userTotal= " + userTotal);
-    $('#finalTotal').text(userTotal); 
+    $('#finalScore').text(userTotal); 
       
           if (userTotal === random){
-          yay();
+          winner();
         }
         else if ( userTotal > random){
-          loser();
+            Loser();
         }
+
+    $("#randomNumber").text(random);
   });   
