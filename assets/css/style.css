@@ -1,0 +1,62 @@
+.title {
+    background-color: #FFE4B5; 
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 26pt;
+    text-align: center; 
+    margin-right: 50%;
+}
+.instructions {
+    background-color: skyblue;
+    margin: 10px; 
+    width: 25%; 
+    font-family: 'Times New Roman', Times, serif; 
+    padding: 20px; 
+    border-radius: 25px;
+    font-size: 16px;
+    justify-content: center
+}
+.listBox {
+    background-color: skyblue; 
+    margin-right: 70%; 
+    border: 2px solid black;  
+    font-size: 12pt; 
+}
+ul {
+    list-style-type: none;
+    display: inline-block;
+}
+ul.blue {
+    color: blue;
+}
+ul.green {
+    color: green; 
+}
+ul.red {
+    color: red;
+}
+ul.yellow {
+    color: yellow; 
+}
+body {
+    background-image: -moz-linear-gradient();
+}
+.winsAndLosses {
+    background-color: cornflowerblue; 
+    margin-right: 80%; 
+    border: 2px solid black;  
+    margin-top: 1%; 
+    width: 20%;
+}
+.matchNumber {
+    background-color: cornflowerblue;
+    border: 1px solid black; 
+    width: 25%; 
+    padding: 5pt; 
+}
+.totalScore {
+    background-color: cornflowerblue;
+    border: 1px solid black; 
+    width: 25%; 
+    padding: 5pt; 
+    margin-top: 1%; 
+}
