@@ -1,5 +1,6 @@
 # unit-4-game
-Crystal Game
+[Crystal Game](vana-abbott.github.io/unit-4-game)
+
 This is a guessing game using numbers where the player will guess with numbers.
 
 There will be four crystals displayed as buttons on the page.
