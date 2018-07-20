@@ -1,5 +1,5 @@
 # unit-4-game
-[Crystal Game](vana-abbott.github.io/unit-4-game)
+[Crystal Game](http://vana-abbott.github.io/unit-4-game)
 
 This is a guessing game using numbers where the player will guess with numbers.
 
